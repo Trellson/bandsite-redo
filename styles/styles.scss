@@ -3,7 +3,9 @@
 @use './partials/reset' as *;
 @use './partials/variables' as *;
 
-
+*{
+    padding: 0 1rem
+}
 
 .header {
     background-color: #323232;
@@ -37,18 +39,38 @@
         width: 100%;
         padding: 0.5rem 0 0 0;
     
-    &__links-bullet {
+        &__links-bullet {
         text-align: center;
         width: 50%;
         padding: 0 0 1rem;
 
-         &--current {
+             &--current {
             border-bottom: 5px solid #FFF;
-        }    
-    }
+             }    
+        }
     }
 
 }
+
+
+.footer {
+    &__wrapper {
+        background-color: #323232;
+        color: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+    p{
+        padding-top: 1rem;
+    }
+}
+
+img{
+    max-width: 100%;
+
+}
+
 
 h1{
     font-size: $mobile-headers;
@@ -58,7 +80,7 @@ h1{
 
 h2{
     font-size: $mobile-headers;
-    
+
 }
 
 a {
@@ -67,5 +89,6 @@ a {
  }
 
 
-    
+
+
 
