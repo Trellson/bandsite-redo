@@ -3,7 +3,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 35vh;
   width: 100%;
 }
 .hero__wrapper {
@@ -14,6 +14,30 @@
 }
 .hero__text {
   font-weight: 600;
+}
+
+.about-article__wrapper {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .about-article__wrapper {
+    padding: 0 2.25rem;
+  }
+}
+.about-article__quote {
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+.about-article__title {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  font-weight: 700;
+}
+.about-article__paragraph {
+  line-height: 1.5rem;
+  padding: 0.825rem 0;
 }
 
 .photo-gallery__wrapper {
@@ -29,21 +53,22 @@
     align-content: space-evenly;
   }
 }
-.photo-gallery__wrapper__item {
+.photo-gallery__title {
+  padding: 0.825rem;
+  font-weight: 700;
+}
+.photo-gallery__item {
   text-align: center;
-  margin: 20px 0;
-  padding: 20px 0;
-  font-size: 5rem;
-  border-radius: 5px;
+  margin: 0.625rem 0rem;
 }
 @media screen and (min-width: 768px) {
-  .photo-gallery__wrapper__item {
+  .photo-gallery__item {
     width: 40%;
     margin: 3vw 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .photo-gallery__wrapper__item {
+  .photo-gallery__item {
     width: 30%;
     margin: 1.25vw 0;
   }
@@ -70,7 +95,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -99,8 +123,12 @@ table {
   border-spacing: 0;
 }
 
-* {
-  padding: 0 1rem;
+@font-face {
+  font-family: "avenir";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+body {
+  font-family: avenir;
 }
 
 .header {

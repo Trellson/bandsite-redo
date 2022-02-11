@@ -2,10 +2,13 @@
 @use './partials/mixins' as *;
 @use './partials/reset' as *;
 @use './partials/variables' as *;
+@use './partials/fonts' as *;
 
-*{
-    padding: 0 1rem
+
+body{ 
+    font-family: avenir;
 }
+
 
 .header {
     background-color: #323232;
