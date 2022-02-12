@@ -1,5 +1,6 @@
-@use './mixins' as *;
-@use './variables' as *;
+@use './partials/global';
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
 
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/Images/hero-bio.jpg);

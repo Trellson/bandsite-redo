@@ -1,8 +1,7 @@
-@use './partials/bio' as *;
-@use './partials/mixins' as *;
-@use './partials/reset' as *;
-@use './partials/variables' as *;
-@use './partials/fonts' as *;
+@use './mixins' as *;
+@use './reset' as *;
+@use './variables' as *;
+@use './fonts' as *;
 
 
 body{ 
