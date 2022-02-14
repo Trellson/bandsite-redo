@@ -136,4 +136,9 @@ a {
 }
 .hero__text {
   font-weight: 600;
+  font-size: 1.5rem;
+}
+.hero__small {
+  color: #FFF;
+  font-size: 1rem;
 }/*# sourceMappingURL=shows.css.map */
