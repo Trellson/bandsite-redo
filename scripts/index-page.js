@@ -24,10 +24,10 @@ const commentArea = document.querySelector(".comments");
 function displayComments(arr) {
 
         let photoDiv = document.createElement('div');
-        photoDiv.innerHTML = "";
         photoDiv.classList.add("comments__photo")
 
-        let photo = document.createElement('img').src ="";
+        let photo = document.createElement('img');
+        photo.src ="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSPooTK6tykHp62uyKMjDgy3QldvMXamui6UYAzwrObXnZ0bPxlbiMVOSo2-Q52qh-jYPdLfavJeuayk_sehK7sVWockSNe-m39-uBIm4Uq&usqp=CAc";
         photoDiv.appendChild(photo)
 
         let comment = document.createElement('div');
@@ -52,9 +52,13 @@ function displayComments(arr) {
         commentText.classList.add("comments__text")
         comment.appendChild(commentText)
 
-        commentArea.appendChild(photoDiv);
-        commentArea.appendChild(comment);
-    
+        let commentChild = document.createElement('div');
+        commentChild.classList.add("comments__div")
+        commentChild.appendChild(photoDiv);
+        commentChild.appendChild(comment);
+
+        commentArea.appendChild(commentChild);
+
 }    
 
 commmentArray.forEach((comment) => {
