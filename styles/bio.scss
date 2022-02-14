@@ -156,6 +156,7 @@
 
   &__div{
     display: flex;
+    justify-content: center;
   }
 
   &__photo{
@@ -170,6 +171,7 @@
   &__photo img{
     max-width: 50%; 
     border-radius: 100%;
+    overflow: hidden;
   }
 
   &__containier{

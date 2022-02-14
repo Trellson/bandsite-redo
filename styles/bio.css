@@ -248,6 +248,7 @@ a {
 
 .comments__div {
   display: flex;
+  justify-content: center;
 }
 .comments__photo {
   position: relative;
@@ -260,6 +261,7 @@ a {
 .comments__photo img {
   max-width: 50%;
   border-radius: 100%;
+  overflow: hidden;
 }
 .comments__containier {
   margin: 1rem;

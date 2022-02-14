@@ -1,0 +1,137 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+body {
+  font-family: avenir;
+}
+
+.header {
+  background-color: #323232;
+  color: #FFF;
+  width: 100%;
+}
+.header__wrapper {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  width: 100%;
+}
+.nav__links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem 0 0 0;
+}
+.nav__links__links-bullet {
+  text-align: center;
+  width: 50%;
+  padding: 0 0 1rem;
+}
+.nav__links__links-bullet--current {
+  border-bottom: 5px solid #FFF;
+}
+
+.footer__wrapper {
+  background-color: #323232;
+  color: #fff;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer p {
+  padding-top: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/Images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35vh;
+  width: 100%;
+}
+.hero__wrapper {
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.hero__text {
+  font-weight: 600;
+}/*# sourceMappingURL=shows.css.map */

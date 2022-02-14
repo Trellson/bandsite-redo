@@ -64,3 +64,24 @@ function displayComments(arr) {
 commmentArray.forEach((comment) => {
     displayComments(comment);
 })
+
+let formCta = document.querySelector(".form__body")
+
+formCta.addEventListener('comment', (event) => {
+    event.preventDefault();
+
+    let commentName = event.target.commentName.value;
+    let commentText = event.target.commentText.value;
+
+    if(commentName && commentText){
+        commentArea.innerText = "";
+        commmentArray.unshift({
+           name: commentName,
+           date: 'xx-xx-xxxx',
+           comment: commentText
+        })
+        commmentArray.forEach((comment) => {
+            displayComments(comment);
+        })
+    }
+})
