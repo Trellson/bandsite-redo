@@ -24,7 +24,7 @@ const commentArea = document.querySelector(".comments");
 function displayComments(arr) {
 
         let photoDiv = document.createElement('div');
-        photoDiv.classList.add("comments__photo")
+        photoDiv.List.add("comments__photo")
 
         let photo = document.createElement('img');
         photo.src ="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSPooTK6tykHp62uyKMjDgy3QldvMXamui6UYAzwrObXnZ0bPxlbiMVOSo2-Q52qh-jYPdLfavJeuayk_sehK7sVWockSNe-m39-uBIm4Uq&usqp=CAc";

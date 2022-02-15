@@ -204,11 +204,12 @@ a {
   margin: 1rem;
   padding: 1rem;
   border-bottom: solid 1px;
+  width: 100%;
 }
 .form__body {
   display: flex;
   flex-direction: column;
-  max-width: 60%;
+  width: 100%;
 }
 .form__label {
   color: #afafaf;

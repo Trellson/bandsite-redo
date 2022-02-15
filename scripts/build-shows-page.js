@@ -43,7 +43,7 @@ function displayShows(arr) {
     date.appendChild(dateLabel);
 
     let date__actual = document.createElement('h4');
-    date__actual.innerText = arr.date;
+    date__actual.innerText = arr.dates;
     date.appendChild(date__actual)
 
     let venue = document.createElement('div')
@@ -83,6 +83,6 @@ showsArray.forEach((shows) => {
 
 let buyTickets = document.querySelector("shows__button")
 
-buyTickets.addEventListener('submit', (event) => {
-    event.preventDefault();
-})
+//buyTickets.addEventListener('submit', (event) => {
+ //   event.preventDefault();
+//})
