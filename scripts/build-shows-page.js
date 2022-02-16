@@ -1,36 +1,17 @@
-const showsArray =[
-{
-    dates: "Mon Sept 06 2021", 
-    venue: "Ronald Lane", 
-    location: "San Francisco, CA"
-},
-{
-    dates: "Tue Sept 21 2021", 
-    venue: "Pier 3 East",  
-    location: "San Francisco, CA"
-},
-{
-    dates: "Fri Oct 15 2021", 
-    venue: "View Lounge",
-    location: "San Francisco, CA" 
-},
-{
-    dates: "Sat Nov 06 2021",   
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA"
-    
-},
-{
-    dates: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA" 
-},
-{
-    dates: "Wed Dec 15 2021", 
-    venue: "Press Club",
-    location: "San Francisco, CA"
-}, 
-]
+const axioskey = "025267d9-c161-4ec6-bdfe-e1496a5bb384"
+
+
+axios.get('https://project-1-api.herokuapp.com/showdates?api_key='+axioskey)
+    .then(response => {
+            displayshows(response.data)
+      
+    })
+
+
+
+
+const commentArea = document.querySelector(".comments");
+
 
 const shows = document.querySelector(".shows__container");
 

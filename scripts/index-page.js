@@ -1,30 +1,21 @@
-const commmentArray =[
-    {
-        name: "Connor Walton",
-        date: "02/17/2021",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." 
-    },
-    {
-        name: "Emilie Beach",
-        date: "01/09/2021",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-    {
-        name: "Miles Ascota",
-        date: "12/20/2020",
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-    },
-]
+const axioskey = "025267d9-c161-4ec6-bdfe-e1496a5bb384"
 
 
+axios.get('https://project-1-api.herokuapp.com/comments?api_key='+axioskey)
+    .then(response => {
+        response.data.forEach((comment) => {
+            displayComment(comment)
+        })
+    })
 
 const commentArea = document.querySelector(".comments");
 
 
-function displayComments(arr) {
+
+function displayComment(arr) {
 
         let photoDiv = document.createElement('div');
-        photoDiv.List.add("comments__photo")
+        photoDiv.classList.add("comments__photo")
 
         let photo = document.createElement('img');
         photo.src ="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSPooTK6tykHp62uyKMjDgy3QldvMXamui6UYAzwrObXnZ0bPxlbiMVOSo2-Q52qh-jYPdLfavJeuayk_sehK7sVWockSNe-m39-uBIm4Uq&usqp=CAc";
@@ -61,9 +52,6 @@ function displayComments(arr) {
 
 }    
 
-commmentArray.forEach((comment) => {
-    displayComments(comment);
-})
 
 let formCta = document.querySelector(".form__body")
 
@@ -81,7 +69,7 @@ formCta.addEventListener('comment', (event) => {
            comment: commentText
         })
         commmentArray.forEach((comment) => {
-            displayComments(comment);
+            displayComment(comment);
         })
     }
 })
