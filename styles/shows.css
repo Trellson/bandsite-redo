@@ -99,13 +99,17 @@ body {
     justify-content: space-between;
   }
 }
-.footer__header__header--logo img {
+.footer__header__--logo img {
   visibility: hidden;
 }
 @media screen and (min-width: 768px) {
-  .footer__header__header--logo img {
+  .footer__header__--logo img {
     visibility: visible;
   }
+}
+.footer__header__--logo img--text {
+  font-size: 1.5rem;
+  line-height: 32px;
 }
 .footer__wrapper {
   background-color: #323232;
@@ -137,10 +141,6 @@ body {
 }
 .footer p {
   padding-top: 1rem;
-}
-
-img {
-  max-width: 100%;
 }
 
 h1 {

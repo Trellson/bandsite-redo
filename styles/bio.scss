@@ -35,7 +35,7 @@
   
   &__quote{
     font-weight: 700;
-    line-height: 2.5rem;
+    line-height: 2rem;
     font-size: 1.3rem;
     padding-bottom: 1rem;
   }
@@ -49,6 +49,16 @@
  &__paragraph{
     line-height: 1.5rem; 
     padding: .825rem 0;
+  }
+
+  &__paragraph-container{
+    display:flex;
+    flex-direction: column;
+
+    @include tablet{
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 

@@ -70,12 +70,21 @@ body{
             }
 
 
-        &__header--logo img{
+        &__--logo img{
             visibility: hidden;
+            
 
             @include tablet{
                 visibility: visible;
             }
+
+         
+        &--text{
+            font-size: $mobile-headers;
+            line-height: 32px;
+            
+        }    
+
         }
     }
 
@@ -113,12 +122,6 @@ body{
 
 
 }
-
-img{
-    max-width: 100%;
-
-}
-
 
 h1{
     font-size: $mobile-headers;
