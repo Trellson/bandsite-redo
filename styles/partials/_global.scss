@@ -58,6 +58,27 @@ body{
 
 
 .footer {
+
+    &__header{
+            display: flex;
+            flex-direction: column;
+
+            @include tablet{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+
+
+        &__header--logo img{
+            visibility: hidden;
+
+            @include tablet{
+                visibility: visible;
+            }
+        }
+    }
+
     &__wrapper {
         background-color: #323232;
         color: #fff;
@@ -66,7 +87,8 @@ body{
         padding: 1rem;
 
         @include tablet{
-            flex-direction: row;
+            display: flex;
+            flex-direction: column;
         }
         
     }
@@ -74,12 +96,22 @@ body{
         @include tablet{
             display:flex;
             flex-direction: row;
+            justify-content:space-around;
+        }
+    }
+    &__bottom--logo{
+        visibility: visible;
+        
+        @include tablet{
+            visibility: hidden;
         }
     }
 
     p{
         padding-top: 1rem;
     }
+
+
 }
 
 img{
