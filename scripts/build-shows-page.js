@@ -3,14 +3,11 @@ const axioskey = "025267d9-c161-4ec6-bdfe-e1496a5bb384"
 
 axios.get('https://project-1-api.herokuapp.com/showdates?api_key='+axioskey)
     .then(response => {
-            displayshows(response.data)
+        response.data.forEach((shows) => {
+            displayShows(shows);
+        })
       
     })
-
-
-
-
-const commentArea = document.querySelector(".comments");
 
 
 const shows = document.querySelector(".shows__container");
@@ -20,27 +17,27 @@ function displayShows(arr) {
     let date = document.createElement('div')
 
     let dateLabel = document.createElement('label');
-    dateLabel.innerTEXT = "Date"
+    dateLabel.innerText = "Date"
     date.appendChild(dateLabel);
 
     let date__actual = document.createElement('h4');
-    date__actual.innerText = arr.dates;
+    date__actual.innerText = arr.date;
     date.appendChild(date__actual)
 
     let venue = document.createElement('div')
+debugger
+    let venue__actual = document.createElement('h4');
+    venue__actual.innerText = arr.place;
+    venue.appendChild(venue__actual);
 
     let venueLabel = document.createElement('label');
-    venueLabel.innerTEXT = "Venue"
+    venueLabel.innerText = "Venue"
     venue.appendChild(venueLabel);
-
-    let venue__actual = document.createElement('h4');
-    venue__actual.innerText = arr.venue;
-    venue.appendChild(venue__actual);
 
     let location = document.createElement('div')
 
     let locationLabel = document.createElement('label');
-    locationLabel.innerTEXT = "Location"
+    locationLabel.innerText = "Location"
     location.appendChild(venueLabel);
 
     let location__actual = document.createElement('h4');
@@ -58,9 +55,9 @@ function displayShows(arr) {
 
 }
 
-showsArray.forEach((shows) => {
-    displayShows(shows);
-})
+//response.data.forEach((shows) => {
+  //  displayShows(shows);
+//})
 
 let buyTickets = document.querySelector("shows__button")
 
