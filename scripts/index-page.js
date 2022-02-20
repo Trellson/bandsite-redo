@@ -34,7 +34,7 @@ function displayComment(arr) {
         commentHeading.appendChild(commentName)
 
         let commentDate = document.createElement('p');
-        commentDate.innerText = arr.date
+        commentDate.innerText = new Date(arr.timestamp).toLocaleDateString();
         commentDate.classList.add("comments__date")
         commentHeading.appendChild(commentDate)
 
@@ -51,6 +51,7 @@ function displayComment(arr) {
         commentArea.appendChild(commentChild);
 
 }    
+
 
 
 let formCta = document.querySelector(".form__body")

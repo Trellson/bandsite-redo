@@ -15,9 +15,15 @@ body{
     width: 100%;
 
     &__wrapper {
-        padding: 1rem 0;
+        padding: 1rem 0 0 0;
         display: flex;
         flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-left: 4rem;
+        }
     }
 
     &__logo {
@@ -33,22 +39,33 @@ body{
 
 .nav {
     width: 100%;
+    line-height: 1.125rem;
 
     &__links {
         display: flex;
         justify-content: center;
         width: 100%;
         color:#FFF;
+
+        @include tablet{
+            justify-content: space-evenly;
+            width: 50%;
+        }
     }
     
     
-    &__links-item{
+    &__links-item {
+        padding-bottom: 1rem;
         text-align: center;
         width: 50%;
         
+        @include tablet{
+            width: 25%;
+
+        }
     
     
-    &__links--current {
+    &--current {
         border-bottom: 5px solid #FFF;
                  
     }
@@ -58,10 +75,14 @@ body{
 
 
 .footer {
+    &__info-container{
+        padding-bottom: 1rem;
+    }
 
     &__header{
             display: flex;
             flex-direction: column;
+            padding: 1rem 0 1rem;
 
             @include tablet{
             display:flex;
@@ -70,8 +91,8 @@ body{
             }
 
 
-        &__--logo img{
-            visibility: hidden;
+        &--logo {
+            display: none;
             
 
             @include tablet{
@@ -85,6 +106,12 @@ body{
             
         }    
 
+        }
+    }
+    &__icons{
+        padding-top:1rem;
+        & img{
+            padding-right: 1rem;
         }
     }
 
@@ -105,7 +132,7 @@ body{
         @include tablet{
             display:flex;
             flex-direction: row;
-            justify-content:space-around;
+            justify-content: space-around;
         }
     }
     &__bottom--logo{
@@ -120,7 +147,9 @@ body{
         padding-top: 1rem;
     }
 
-
+    &__contact-name{
+    font-weight: 600;
+    }
 }
 
 h1{
@@ -129,9 +158,13 @@ h1{
 
 }
 
+button{
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
 h2{
     font-size: $mobile-headers;
-
 }
 
 a {
@@ -139,7 +172,9 @@ a {
     text-decoration: none; 
  }
 
-
+.copyright{
+    font-size: 0.625rem;
+}
 
 
 
