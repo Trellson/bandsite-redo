@@ -189,6 +189,12 @@ button {
 h2 {
   font-size: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  h2 {
+    line-height: 2.75rem;
+    font-size: 2.5rem;
+  }
+}
 
 a {
   color: #fff;
