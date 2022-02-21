@@ -128,7 +128,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__header--logo {
-    visibility: visible;
+    display: flex;
   }
 }
 .footer__header--logo--text {
@@ -226,6 +226,7 @@ a {
     font-weight: 700;
     font-size: 3.75rem;
     line-height: 4.25rem;
+    margin-left: 2.25rem;
   }
 }
 
@@ -237,17 +238,36 @@ a {
     padding: 0 2.25rem;
   }
 }
-.about-article__wrapper h3 {
-  font-size: 1rem;
+.about-article__wrapper--inner {
+  margin: 0 4.25rem 0;
 }
 .about-article__header {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   font-weight: 600;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .about-article__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-top: 3rem;
+  }
 }
 .about-article__quote {
+  font-weight: 600;
+  line-height: 1.375rem;
+  font-size: 0.875rem;
+  padding: 1.5rem 0 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .about-article__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 3rem 0 2.25rem 0;
+  }
+}
+.about-article__quote--info {
   font-weight: 700;
-  line-height: 2rem;
-  font-size: 1.3rem;
 }
 .about-article__concert-shot {
   width: 100%;
@@ -269,7 +289,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .about-article__paragraph {
-    padding: 1rem;
+    padding: 1rem 0.7rem 0 0;
   }
 }
 .about-article__paragraph-container {
@@ -335,8 +355,14 @@ a {
 }
 .form__label {
   font-size: 0.625rem;
+  line-height: 1.25rem;
   color: #afafaf;
   padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .form__label {
+    font-size: 0.75rem;
+  }
 }
 .form__name {
   height: 2rem;
@@ -365,7 +391,7 @@ a {
 .form__button {
   background-color: #323232;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.625rem;
   border-radius: 5%;
   height: 2.5rem;
   cursor: pointer;

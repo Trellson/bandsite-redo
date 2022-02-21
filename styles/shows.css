@@ -128,7 +128,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__header--logo {
-    visibility: visible;
+    display: flex;
   }
 }
 .footer__header--logo--text {
