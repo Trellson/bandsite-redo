@@ -205,6 +205,31 @@ a {
   font-size: 0.625rem;
 }
 
+button {
+  background-color: #323232;
+  color: #fff;
+  font-size: 0.625rem;
+  border-radius: 5px;
+  height: 2.5rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+label {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  color: #afafaf;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  label {
+    font-size: 0.75rem;
+  }
+}
+
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/Images/hero-shows.jpg);
   background-position: center;
@@ -228,4 +253,9 @@ a {
 .hero__small {
   color: #FFF;
   font-size: 1rem;
+}
+
+.shows__title {
+  padding: 1.5rem 0 1rem;
+  font-weight: 700;
 }/*# sourceMappingURL=shows.css.map */

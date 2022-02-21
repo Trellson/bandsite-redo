@@ -180,5 +180,30 @@ a {
     font-size: 0.625rem;
 }
 
+button{
+    background-color: #323232;
+    color:#fff;
+    font-size: $mobile-labels-buttons;
+    border-radius: 5px;
+    height: 2.5rem;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: #000;;
+    }
+}
 
+
+
+label{
+    font-size: $mobile-labels-buttons;
+    line-height: $labels-buttons-lineHeight;
+      color: #afafaf ;
+      padding-bottom: .5rem;
+
+      @include tablet{
+        font-size: $Desktop-tablet-labels-buttons;
+      }
+
+  }
 

@@ -5,6 +5,7 @@ axios.get('https://project-1-api.herokuapp.com/showdates?api_key='+axioskey)
     .then(response => {
         response.data.forEach((shows) => {
             displayShows(shows);
+            console.log(response.data)
         })
       
     })
@@ -14,44 +15,42 @@ const shows = document.querySelector(".shows__container");
 
 function displayShows(arr) {
 
-    let date = document.createElement('div')
+    let showcase = document.createElement('div')
+    showcase.classList.add("showcase__box")
 
     let dateLabel = document.createElement('label');
     dateLabel.innerText = "Date"
-    date.appendChild(dateLabel);
+    showcase.appendChild(dateLabel);
 
     let date__actual = document.createElement('h4');
-    date__actual.innerText = arr.date;
-    date.appendChild(date__actual)
-
-    let venue = document.createElement('div')
-debugger
-    let venue__actual = document.createElement('h4');
-    venue__actual.innerText = arr.place;
-    venue.appendChild(venue__actual);
+    date__actual.innerText = new Date(arr.timestamp).toLocaleDateString();
+    showcase.appendChild(date__actual)
 
     let venueLabel = document.createElement('label');
     venueLabel.innerText = "Venue"
-    venue.appendChild(venueLabel);
+    showcase.appendChild(venueLabel);
 
-    let location = document.createElement('div')
+  
+    let venue__actual = document.createElement('h4');
+    venue__actual.innerText = arr.place;
+    showcase.appendChild(venue__actual);
 
-    let locationLabel = document.createElement('label');
-    locationLabel.innerText = "Location"
-    location.appendChild(venueLabel);
+
+    let location__Label = document.createElement('label');
+    location__Label.innerText = "Location"
+    showcase.appendChild(location__Label);
 
     let location__actual = document.createElement('h4');
     location__actual.innerText = arr.location;
-    location.appendChild(location__actual);
+    showcase.appendChild(location__actual);
 
     let shows__button = document.createElement('button');
     shows__button.classList.add("shows__button")
     shows__button.innerText = "Buy Tickets"
 
-    shows.appendChild(date);
-    shows.appendChild(venue);
-    shows.appendChild(location);
-    shows.appendChild(shows__button)
+    showcase.appendChild(shows__button)
+
+    shows.appendChild(showcase)
 
 }
 
