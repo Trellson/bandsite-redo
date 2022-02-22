@@ -1,17 +1,43 @@
 const axioskey = "f8e9facf-bec2-48cf-9f9a-008404c69cbe"
 
 
+
 axios.get('https://project-1-api.herokuapp.com/showdates?api_key='+axioskey)
     .then(response => {
+         displayHeader();
         response.data.forEach((shows) => {
             displayShows(shows);
             console.log(response.data)
         })
-      
+        
     })
 
 
 const shows = document.querySelector(".shows__container");
+
+function displayHeader() {
+    let showsHeader = document.createElement('div')
+    showsHeader.classList.add("shows__header")
+    
+    let dateHeader = document.createElement('h4')
+    dateHeader.classList.add("shows__header--date")
+    dateHeader.innerText = "DATE"
+    showsHeader.appendChild(dateHeader)
+
+    let venueHeader = document.createElement('h4')
+    venueHeader.classList.add("shows__header--venue")
+    venueHeader.innerText = "VENUE"
+    showsHeader.appendChild(venueHeader)
+
+    let locationHeader = document.createElement('h4')
+    locationHeader.classList.add("shows__header--Location")
+    locationHeader.innerText = "LOCATION"
+    showsHeader.appendChild(locationHeader)
+
+    shows.appendChild(showsHeader)
+}
+
+
 
 function displayShows(arr) {
 
@@ -22,10 +48,10 @@ function displayShows(arr) {
     dateLabel.innerText = "Date"
     showcase.appendChild(dateLabel);
 
-    let date__actual = document.createElement('h4');
-    date__actual.classList.add("shows__showcase-box--dates")
-    date__actual.innerText = new Date (Number(arr.date)).toDateString("en-US", {weekday: "short" ,month: 'short', day: "2-digit", year: "numeric"});
-    showcase.appendChild(date__actual)
+    let dateActual = document.createElement('h4');
+    dateActual.classList.add("shows__showcase-box--dates")
+    dateActual.innerText = new Date (Number(arr.date)).toDateString("en-US", {weekday: "short" ,month: 'short', day: "2-digit", year: "numeric"});
+    showcase.appendChild(dateActual)
 
 
     let venueLabel = document.createElement('label');
@@ -33,26 +59,27 @@ function displayShows(arr) {
     showcase.appendChild(venueLabel);
 
   
-    let venue__actual = document.createElement('p');
-    venue__actual.classList.add("shows__showcase-box--venue")
-    venue__actual.innerText = arr.place;
-    showcase.appendChild(venue__actual);
+    let venueActual = document.createElement('p');
+    venueActual.classList.add("shows__showcase-box--venue")
+    venueActual.innerText = arr.place;
+    showcase.appendChild(venueActual);
 
 
-    let location__Label = document.createElement('label');
-    location__Label.innerText = "Location"
-    showcase.appendChild(location__Label);
+    let locationLabel = document.createElement('label');
+    locationLabel.innerText = "Location"
+    showcase.appendChild(locationLabel);
 
-    let location__actual = document.createElement('p');
-    location__actual.classList.add("shows__showcase-box--location")
-    location__actual.innerText = arr.location;
-    showcase.appendChild(location__actual);
+    let locationActual = document.createElement('p');
+    locationActual.classList.add("shows__showcase-box--location")
+    locationActual.innerText = arr.location;
+    showcase.appendChild(locationActual);
 
-    let shows__button = document.createElement('button');
-    shows__button.classList.add("shows__button")
-    shows__button.innerText = "Buy Tickets"
+    let showsButton = document.createElement('button');
+    showsButton.classList.add("shows__button")
+    showsButton.innerText = "Buy Tickets"
 
-    showcase.appendChild(shows__button)
+    showcase.appendChild(showsButton)
+
 
     shows.appendChild(showcase)
 
