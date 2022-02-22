@@ -1,4 +1,4 @@
-const axioskey = "025267d9-c161-4ec6-bdfe-e1496a5bb384"
+const axioskey = "f8e9facf-bec2-48cf-9f9a-008404c69cbe"
 
 
 axios.get('https://project-1-api.herokuapp.com/showdates?api_key='+axioskey)
@@ -16,22 +16,25 @@ const shows = document.querySelector(".shows__container");
 function displayShows(arr) {
 
     let showcase = document.createElement('div')
-    showcase.classList.add("showcase__box")
+    showcase.classList.add("shows__showcase-box")
 
     let dateLabel = document.createElement('label');
     dateLabel.innerText = "Date"
     showcase.appendChild(dateLabel);
 
     let date__actual = document.createElement('h4');
-    date__actual.innerText = new Date(arr.timestamp).toLocaleDateString();
+    date__actual.classList.add("shows__showcase-box--dates")
+    date__actual.innerText = new Date (Number(arr.date)).toDateString("en-US", {weekday: "short" ,month: 'short', day: "2-digit", year: "numeric"});
     showcase.appendChild(date__actual)
+
 
     let venueLabel = document.createElement('label');
     venueLabel.innerText = "Venue"
     showcase.appendChild(venueLabel);
 
   
-    let venue__actual = document.createElement('h4');
+    let venue__actual = document.createElement('p');
+    venue__actual.classList.add("shows__showcase-box--venue")
     venue__actual.innerText = arr.place;
     showcase.appendChild(venue__actual);
 
@@ -40,7 +43,8 @@ function displayShows(arr) {
     location__Label.innerText = "Location"
     showcase.appendChild(location__Label);
 
-    let location__actual = document.createElement('h4');
+    let location__actual = document.createElement('p');
+    location__actual.classList.add("shows__showcase-box--location")
     location__actual.innerText = arr.location;
     showcase.appendChild(location__actual);
 
@@ -54,12 +58,8 @@ function displayShows(arr) {
 
 }
 
-//response.data.forEach((shows) => {
-  //  displayShows(shows);
-//})
-
 let buyTickets = document.querySelector("shows__button")
 
-//buyTickets.addEventListener('submit', (event) => {
- //   event.preventDefault();
-//})
+buyTickets.addEventListener('submit', (event) => {
+    event.preventDefault();
+})

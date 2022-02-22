@@ -139,7 +139,7 @@ body{
         visibility: visible;
         
         @include tablet{
-            visibility: hidden;
+            display: none;
         }
     }
 

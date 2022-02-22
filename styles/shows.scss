@@ -31,9 +31,51 @@
 }
 
 .shows{
+    margin:  1.5rem 0rem 1.5rem;
 
+    &__button{
+        margin-bottom: 1rem;
+    }
     &__title{
-        padding: 1.5rem 0 1rem;
+        padding: 0 0 1rem 1rem;
         font-weight: 700;
     }
+
+    &__showcase-box{
+        display: flex;
+        padding: 0 1rem;
+        flex-direction: column;
+        border-bottom: 1px #e1e1e1 solid;
+        margin-top: 1rem;     
+        
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            & button{
+                width: 10.5rem;
+                font-size: $Desktop-tablet-labels-buttons;
+            }
+
+            & label{
+                display: none;
+            }
+        }
+
+        &--dates{
+            font-weight: 700;
+            font-size: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &--venue{
+            padding-bottom: 1rem;
+        }
+
+        &--location{
+            padding-bottom: 1rem;
+        }
+    }
+
 }
